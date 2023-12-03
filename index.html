@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="intro-page">
+      <div>
+        <h1>Weather Api</h1>
+        <button id="fetchButton">Fetch Data</button>
+      </div>
+    </section>
+    <section class="weather-page">
+      <div class="location-map">
+        <div class="heading-location">
+          <h1>Welcome To The Weather Application</h1>
+          <p>Here is your current location</p>
+          <div class="location">
+            <div id="Latitude"></div>
+            <div id="Logitude"></div>
+          </div>
+        </div>
+        <div id="map">
+          <!-- js -->
+          <iframe id="mapFrame" src="" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+        </div>
+      </div>
+      <div class="weather-data-div">
+        <h1>Your Weather Data</h1>
+        <div class="weather-data">
+          <div id="location"></div>
+          <div id="windspeed"></div>
+          <div id="humidity"></div>
+          <div id="timeZone"></div>
+          <div id="pressure"></div>
+          <div id="windDirection"></div>
+          <div id="uvIndex"></div>
+          <div id="feelsLike"></div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

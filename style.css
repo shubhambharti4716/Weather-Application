@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --theme: #360369;
+  --dark_theme: #270846;
+}
+/* intro page */
+.intro-page {
+  height: 100vh;
+  width: 100vw;
+  background: var(--theme);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.intro-page > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.intro-page h1{
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+}
+.intro-page button{
+    height: 52px;
+    padding-inline: 2rem;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.intro-page button:hover{
+    background: rgb(205, 205, 205);
+}
+.intro-page button:active{
+    border: 1px solid white;
+    scale: 0.9;
+}
+/* weather page */
+.weather-page{
+    display: none;
+}
+.location-map{
+    height: fit-content;
+    background: var(--theme);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.heading-location{
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+.location{
+    display: flex;
+    gap: 1rem;
+}
+.heading-location>h1{
+    font-size: 38px;
+}
+.heading-location>p{
+    font-weight: 300;
+    font-size: 24px;
+}
+.location>div{
+    background: var(--dark_theme);
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 24px;
+}
+#map{
+    margin: auto;
+    width: 90%;
+    height: 400px;
+}
+.weather-data-div{
+    background: white;
+    padding: 2rem;
+}
+.weather-data-div>h1{
+    font-size: 38px;
+    color: var(--theme);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+.weather-data{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+.weather-data div{
+    padding: 0.5rem 1.5rem;
+    background: var(--theme);
+    color: white;
+    font-size: 24px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:426px) {
+    .intro-page h1{
+        font-size: 12vw;
+    }
+    .intro-page button{
+        width: fit-content;
+        height: fit-content;
+        font-size: 1.5em;
+        padding: 0.3rem 1rem;
+    }
+    /* weather page */
+    .location-map,
+    .weather-data-div{
+        padding: 1rem;
+    }
+    .heading-location h1{
+        margin: 1rem 0rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .heading-location p{
+        font-size: 1rem;
+    }
+    .location div{
+        font-size: 0.8rem;
+        padding-inline: 1rem;
+    }
+    .location-map{
+        height: fit-content;
+    }
+    #map{
+        margin: auto;
+        width: 90%;
+        height: 300px;
+    }
+    .weather-data-div h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .weather-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .weather-data div{
+        font-size: 1rem;
+    }
+}
